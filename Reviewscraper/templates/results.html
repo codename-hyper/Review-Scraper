@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Results{% endblock %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Rating</th>
+        <th>Rating header</th>
+        <th>comment</th>
+        <th>customer name</th>
+    </tr>
+
+    {% for review in rev %}
+    <tr>
+        <td>{{review['product']}}</td>
+        <td>{{review['rating']}}</td>
+        <td>{{review['rating_text']}}</td>
+        <td>{{review['comment']}}</td>
+        <td>{{review['customer']}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

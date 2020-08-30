@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Web Scraper{% endblock %}
+
+{% block content %}
+    <form action="/scrap" method="POST">
+        <h1><label>Search for items :</label></h1>
+        <br>
+        <input type="text" name="wst">
+        <input type="submit" value="Search">
+    </form>
+{% endblock %}
